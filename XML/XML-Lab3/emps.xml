@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-stylesheet href="style.css" type="text/css"?>-->
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<!DOCTYPE emps SYSTEM "validate.dtd">
+<emps>
+    <employee>
+            <name>Abdelrahman</name>
+            <phone type="mobile">011125462</phone>
+            <address>
+                <street>reo st</street>
+                <Bnum>85</Bnum>
+                <region>Upper</region>
+                <city>Alex</city>
+                <country>Egypt</country>
+            </address>
+            <email>Abdelrahman@gmail.com</email>
+    </employee>
+    <employee>
+        <name>Ronaldo</name>
+        <phone type="mobile">01754846814</phone>
+        <address>
+            <street>Madera st</street>
+            <Bnum>15</Bnum>
+            <region>Siiiiii</region>
+            <city>Calma</city>
+            <country>Spain</country>
+        </address>
+        <email>Ronaldo@gmail.com</email>
+    </employee>
+    <employee>
+        <name>abdelhameed</name>
+        <phone type="mobile">01564654654</phone>
+        <phone type="home">035236541</phone>
+        <address>
+            <street>sunburest st</street>
+            <Bnum>77</Bnum>
+            <region>southern</region>
+            <city>Salamanka</city>
+            <country>Azrabejan</country>
+        </address>
+        <email>abooda@gmail.com</email>
+    </employee>
+    <employee>
+        <name>Benzema</name>
+        <phone type="work">3333333</phone>
+        <address>
+            <street>Legend st</street>
+            <Bnum>9</Bnum>
+            <region>Balondor</region>
+            <city>Pares</city>
+            <country>France</country>
+        </address>
+        <email>aboibrahim@gmail.com</email>
+    </employee>
+</emps>

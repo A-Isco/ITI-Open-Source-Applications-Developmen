@@ -1,0 +1,23 @@
+library {
+  background-color: rgb(84, 182, 225);
+  width: 100%;
+}
+location,
+description,
+librarian {
+  display: block;
+  font-size: 30pt;
+  background-color: rgb(13, 93, 150);
+}
+
+books {
+  display: block;
+  background-color: rgb(10, 150, 82);
+}
+book {
+  display: block;
+  margin-bottom: 30pt;
+  margin-left: 0pt;
+  color: rgb(255, 255, 255);
+  background-color: rgb(8, 97, 161);
+}

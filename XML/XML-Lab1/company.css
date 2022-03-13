@@ -1,0 +1,15 @@
+company {
+  background-color: rgb(35, 189, 189);
+}
+library {
+  display: block;
+  background-color: rgb(98, 129, 223);
+}
+email,
+phones,
+addresses,
+name {
+  display: block;
+  background-color: rgb(133, 160, 85);
+  font-size: 20pt;
+}

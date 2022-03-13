@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="EmployeeData.css"?>
+<!DOCTYPE employees SYSTEM "employee.dtd" >
+<employees>
+    <employee>
+        <name>
+            <fname>Abdelrahman</fname>
+            <lname>Mohamed</lname>
+        </name>
+        <phones>
+            <phone type="mobile">0111265456</phone>
+            <phone type="work">0356566862</phone>
+        </phones>
+        <address>
+            <country>Spain</country>
+            <city>Madrid</city>
+            <region>Bernabue</region>
+            <street>Calma</street>
+            <buildingNumber>9</buildingNumber>
+        </address>
+        <Email>abdooisco@gmail.com</Email>
+    </employee>   
+</employees>

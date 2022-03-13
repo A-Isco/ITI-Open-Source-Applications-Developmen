@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="employees">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="employee"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="employee">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="name"/>
+                <xs:element ref="phones"/>
+                <xs:element ref="address"/>
+                <xs:element ref="Email"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="name">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="fname"/>
+                <xs:element ref="lname"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="fname" type="xs:string"/>
+    <xs:element name="lname" type="xs:string"/>
+    <xs:element name="phones">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="phone"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="phone">
+        <xs:complexType mixed="true">
+            <xs:attribute name="type" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="address">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="country"/>
+                <xs:element ref="city"/>
+                <xs:element ref="region"/>
+                <xs:element ref="street"/>
+                <xs:element ref="buildingNumber"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="country" type="xs:string"/>
+    <xs:element name="city" type="xs:string"/>
+    <xs:element name="region" type="xs:string"/>
+    <xs:element name="street" type="xs:string"/>
+    <xs:element name="buildingNumber" type="xs:string"/>
+    <xs:element name="Email" type="xs:string"/>
+</xs:schema>
