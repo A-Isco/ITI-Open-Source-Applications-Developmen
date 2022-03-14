@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Screenshot</title>
+  </head>
+  <body>
+    <div class="container">
+      <video autoplay="true" id="videoElement"></video>
+      <button onclick="screenshot();">ScreenShot</button>
+      <canvas id="showscreenshot"></canvas>
+      <img id="showscreenshotimg" />
+    </div>
+
+    <script>
+      var video = document.querySelector("#videoElement");
+      var canvas = document.querySelector("#showscreenshot");
+      var img = document.querySelector("#showscreenshotimg");
+
+      async function startCamera() {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          let stream = await navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: false,
+          });
+          video.srcObject = stream;
+        }
+      }
+
+      startCamera();
+
+      if (localStorage.myimage) {
+        img.src = localStorage.myimage;
+      }
+
+      function screenshot() {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        let ctx = canvas.getContext("2d");
+        ctx.drawImage(video, 0, 0);
+        let imgAsStr = canvas.toDataURL("image/webp");
+        console.log(imgAsStr);
+        localStorage.myimage = imgAsStr;
+        img.src = canvas.toDataURL("image/webp");
+      }
+    </script>
+  </body>
+</html>
