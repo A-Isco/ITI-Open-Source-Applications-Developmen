@@ -1,0 +1,12 @@
+{
+    "name": "vendor_name/webservicesproject",
+    "description": "simple project",
+    "license": "MIT",
+    
+    
+    "autoload": {
+        "classmap": ["Model","View"]
+       
+    }
+    
+}
