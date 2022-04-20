@@ -28,6 +28,12 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required|min:3|unique:posts',
+            'description' => 'required|min:10',
+            'user_id' => 'required|exists:users,id',
+        ]);
+
         Post::create([
             'title' => $request->title,
             'description' => $request->description,
@@ -49,19 +55,28 @@ class PostController extends Controller
     {
         $post = Post::find($id);
 
+        $request->validate([
+            'title' => 'required|min:3|unique:posts,title,' . $post->title . ',title',
+            'description' => 'required|min:10',
+        ]);
+
         $post->update([
             'title' => $request->title,
             'description' => $request->description,
-            'user_id' => $request->user_id
         ]);
 
-        return view('posts.show', ['post' => $post]);
+        
+
+        $users = User::all();
+
+        return view('posts.show', ['post' => $post, 'users' => $users]);
     }
 
     public function show($id)
     {
         $post = Post::find($id);
-        return view('posts.show', ['post' => $post]);
+        return view('posts.show', ['post' => $post, 'users' => User::all()]);
+        // return view('posts.show', ['post' => $post]);
     }
 
     public function delete($id)
