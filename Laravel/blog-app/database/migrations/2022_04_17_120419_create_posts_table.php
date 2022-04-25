@@ -17,7 +17,9 @@ return new class extends Migration {
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title');
+            $table->string('slug')->unique()->nullable();
             $table->text('description');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

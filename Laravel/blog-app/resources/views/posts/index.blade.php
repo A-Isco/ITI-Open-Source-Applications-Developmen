@@ -16,7 +16,9 @@ use Carbon\Carbon;
     <tr>
       <th scope="col">#</th>
       <th scope="col">Title</th>
+      <th scope="col">Slug</th>
       <th scope="col">Posted By</th>
+      <th scope="col">Image</th>
       <th scope="col">Created At</th>
       <th scope="col">Actions</th>
     </tr>
@@ -26,12 +28,16 @@ use Carbon\Carbon;
     <tr>
       <td>{{ $post->id }}</th>
       <td>{{ $post->title }}</td>
+      <td>{{ $post->slug }}</th>
       @if($post->user)
       <td>{{$post->user->name}}</td>
       @else
       <td>Not Found</td>
       @endif
-
+      <td style="width: 10%">
+      <img class="img-fluid" src="http://127.0.0.1:8000/{{$post->image}}"> 
+      
+    </td>
 
 
 
