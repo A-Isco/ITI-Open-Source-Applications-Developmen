@@ -1,0 +1,39 @@
+<h3 class="mt-5">Show Student</h3>
+<h1>{{viewStudent.id}} : {{viewStudent.name}} : {{viewStudent.age}} : {{viewStudent.deptno}}</h1>
+
+<h3 class="mt-5">Insert Bar</h3>
+<input type="text" class="mx-2" [(ngModel)]="newStudent.id">
+<input type="text" class="mx-2" [(ngModel)]="newStudent.name">
+<input type="text" class="mx-2" [(ngModel)]="newStudent.age">
+<input type="text" class="mx-2" [(ngModel)]="newStudent.deptno">
+<button class="btn-dark mx-2" (click)="insert()">submit</button>
+
+<table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive">
+    <thead class="thead-inverse|thead-default">
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>DeptNo</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of students">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.deptno}}</td>
+                <td><button class="btn-success" (click)="show(item.id)">show</button> <button class="btn-primary mx-2" (click)="edit(item.id)">Edit</button> <button class="btn-danger" (click)="delete(item.id)">delete</button></td>
+            </tr>
+        </tbody>
+</table>
+
+<div class="mt-5">
+    <h3>Edit Bar</h3>
+    <input type="text" #v1 class="mx-2" [(ngModel)]="editStudent.id">
+    <input type="text" #v2 class="mx-2" [(ngModel)]="editStudent.name">
+    <input type="text" #v3 class="mx-2" [(ngModel)]="editStudent.age">
+    <input type="text" #v4 class="mx-2" [(ngModel)]="editStudent.deptno">
+    <button class="btn-dark mx-2" (click)="update()">update</button>
+</div>
