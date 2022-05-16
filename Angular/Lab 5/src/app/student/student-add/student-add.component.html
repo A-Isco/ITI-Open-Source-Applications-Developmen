@@ -1,0 +1,21 @@
+<h3 class="mt-5">Insert Student from Here!</h3>
+<form #std="ngForm" class="mx-1">
+    <label class="mt-1" for="id">ID</label><br>
+    <input type="text" class="m-2" #stdId="ngModel" [(ngModel)]="newStudent.id" name="id" required pattern="[0-9]*">
+    <span *ngIf="stdId.errors?.['required'] && stdId.touched">ID is required</span>
+    <span *ngIf="stdId.errors?.['pattern'] && stdId.touched">ID should be a number</span><br>
+    <label class="mt-1" for="name">Name</label><br>
+    <input type="text" class="m-2" #stdName="ngModel" [(ngModel)]="newStudent.name" name="name" required pattern="[a-zA-Z]*">
+    <span *ngIf="stdName.errors?.['required'] && stdName.touched">Name is required</span>
+    <span *ngIf="stdName.errors?.['pattern'] && stdName.touched">Name should only have characters</span><br>
+    <label class="mt-1" for="age">Age</label><br>
+    <input type="text" class="m-2" #stdAge="ngModel" [(ngModel)]="newStudent.age" name="age" required pattern="[0-9]*">
+    <span *ngIf="stdAge.errors?.['required'] && stdAge.touched">Age is required</span>
+    <span *ngIf="stdAge.errors?.['pattern'] && stdAge.touched">Age should be a number</span><br>
+    <label class="mt-1" for="deptno">Department Number</label><br>
+    <input type="text" class="m-2" #stdDept="ngModel" [(ngModel)]="newStudent.deptno" name="deptno" required pattern="[0-9]*">
+    <span *ngIf="stdDept.errors?.['required'] && stdDept.touched">Department Number is required</span>
+    <span *ngIf="stdDept.errors?.['pattern'] && stdDept.touched">Department number should be a number</span><br>
+</form>
+
+<button class="btn-dark m-2" (click)="insert()" [disabled]="std.invalid">submit</button>

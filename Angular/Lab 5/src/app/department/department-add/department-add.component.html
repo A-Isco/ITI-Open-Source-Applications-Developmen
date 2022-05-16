@@ -1,0 +1,17 @@
+<h3 class="mt-5">Insert Department from Here!</h3>
+<form #dept="ngForm" class="mx-1">
+    <label class="mt-1" for="id">ID</label><br>
+    <input type="text" class="m-2" #dptId="ngModel" [(ngModel)]="newDept.id" name="id" required pattern="[0-9]*">
+    <span *ngIf="dptId.errors?.['required'] && dptId.touched">ID is required</span>
+    <span *ngIf="dptId.errors?.['pattern'] && dptId.touched">ID should be a number</span><br>
+    <label class="mt-1" for="name">Name</label><br>
+    <input type="text" class="m-2" #deptName="ngModel" [(ngModel)]="newDept.deptName" name="name" required pattern="[a-zA-Z]*">
+    <span *ngIf="deptName.errors?.['required'] && deptName.touched">Name is required</span>
+    <span *ngIf="deptName.errors?.['pattern'] && deptName.touched">Name should only have characters</span><br>
+    <label class="mt-1" for="location">Location</label><br>
+    <input type="text" class="m-2" #deptLoc="ngModel" [(ngModel)]="newDept.location" name="location" required pattern="[a-zA-Z]*">
+    <span *ngIf="deptLoc.errors?.['required'] && deptLoc.touched">Location is required</span>
+    <span *ngIf="deptLoc.errors?.['pattern'] && deptLoc.touched">Location should be a number</span><br>
+</form>
+
+<button class="btn-dark m-2" (click)="insert()" [disabled]="dept.invalid">submit</button>
