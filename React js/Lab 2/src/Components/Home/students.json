@@ -1,0 +1,39 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Isco",
+      "age": 25
+    },
+    {
+      "id": 2,
+      "name": "Benzema",
+      "age": 34
+    },
+    {
+      "id": 3,
+      "name": "Luca",
+      "age": 36
+    },
+    {
+      "id": 4,
+      "name": "Ronaldo",
+      "age": 36
+    },
+    {
+      "id": 5,
+      "name": "Ozil",
+      "age": 32
+    },
+    {
+      "id": 6,
+      "name": "Marcelo",
+      "age": 35
+    },
+    {
+      "id": 7,
+      "name": "Valverde",
+      "age": 26
+    }
+  ]
+}
