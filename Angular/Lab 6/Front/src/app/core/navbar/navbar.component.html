@@ -1,0 +1,54 @@
+<!-- <a [routerLink]="['']">Home</a> | <a [routerLink]="['/students']">Students</a> | <a [routerLink]="['/departments']">Departments</a><br><br>
+
+
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                [routerLink]="['']"
+                class="nav-link active text-primary"
+                aria-current="page"
+              >
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink]="['/students']"} class="nav-link text-primary">
+                Artists
+              </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/departments']" class="nav-link text-primary">
+                  Artists
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div> -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" [routerLink]="['']">Lab 6</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" [routerLink]="['']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" [routerLink]="['/students']">Students</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" [routerLink]="['/departments']">Departments</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

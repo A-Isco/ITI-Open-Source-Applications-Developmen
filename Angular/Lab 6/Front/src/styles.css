@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("../node_modules/bootstrap/dist/css/bootstrap.css");
+
+body{
+    background-color: rgb(19, 16, 16);
+}
+
+.background{
+    background-color: rgb(28, 29, 29);
+}
+
+.labels{
+    color: rgb(204, 200, 200);
+}
+
+input{
+    background-color: rgb(226, 219, 219);
+    color: black;
+}

@@ -1,0 +1,34 @@
+<div class="container text-center my-2">
+  <button class="btn btn-outline-secondary mx-1 my-3" style="font-size: 40px;" [routerLink]="['/students/add']">
+    Add Student
+  </button>
+  <table
+    class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive background"
+    style="color: rgb(204, 200, 200);"
+  >
+    <thead class="thead-inverse|thead-default">
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>DeptNo</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of students">
+        <td>{{ item._id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.department }}</td>
+        <td>
+          <button
+            class="btn btn-outline-primary mx-1"
+            [routerLink]="['/students/details', item._id]"
+          >
+            Details
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <router-outlet></router-outlet>
+</div>
