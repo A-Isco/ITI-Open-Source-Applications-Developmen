@@ -1,6 +1,7 @@
 from datetime import datetime
 import re
 from stat import FILE_ATTRIBUTE_READONLY
+from typing_extensions import Self
 import mysql.connector
 
 class Person:
@@ -121,6 +122,7 @@ class Office:
         else:
             print("Error | Wrong ID")
             return "Error"
+                
 
     def hire(self, Employee): 
         self.__cur.execute(f'''Insert into Employees(full_name, email, salary, money, sleepMood, workMood, healthRate, is_manager)
