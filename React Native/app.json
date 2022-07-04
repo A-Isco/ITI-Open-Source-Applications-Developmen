@@ -1,0 +1,8 @@
+{
+  "expo": {
+    "name": "react-native-task",
+    "slug": "react-native-task",
+    "version": "1.0.0",
+    "assetBundlePatterns": ["**/*"]
+  }
+}
